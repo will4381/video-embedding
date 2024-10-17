@@ -1,6 +1,6 @@
-# Video-Text Matching Using CLIP
+# Video-Text Matching
 
-This repository demonstrates how to perform video-text matching using OpenAI's CLIP model. It allows you to search for specific content within a video using natural language queries.
+This repository performs video-text matching using OpenAI's CLIP model. It allows you to search for specific content within a video using natural language queries.
 
 ## Installation
 
