@@ -72,10 +72,10 @@ The video is processed by sampling overlapping clips to capture temporal context
 
   ```
   Frames:    [F0, F1, F2, F3, F4, F5, F6, F7, F8, F9, ...]
-              |________|
+              |--------|
                  Clip 1
-                    |________|
-                       Clip 2
+                  |--------|
+                     Clip 2
   ```
 
 ## Embedding and Similarity Calculation
@@ -126,8 +126,9 @@ The video is processed by sampling overlapping clips to capture temporal context
 
 ### Original Video
 
-![Original Video](content/IMG_3181.mp4)
+<img src="content/original.gif" alt="Original Video" width="400">
 
+*(The video `content/IMG_3181.mp4` has been converted to `content/original.gif` for display purposes.)*
 
 ### Query
 
@@ -137,7 +138,9 @@ The video is processed by sampling overlapping clips to capture temporal context
 
 ### Generated GIF
 
-![Generated GIF](content/output.gif)
+<img src="content/output.gif" alt="Generated GIF" width="400">
+
+*(The GIF `content/output.gif` is generated after running the script.)*
 
 ---
 
