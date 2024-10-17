@@ -46,25 +46,25 @@ The video is processed by sampling overlapping clips to capture temporal context
 
 - **Algorithm:**
 
-  For each clip starting at frame index \( i \):
+  For each clip starting at frame index $`( i )`$:
 
   - **Clip Selection:**
 
-    \[
-    \text{clip} = \text{frames}[i : i + \text{clip\_length}]
-    \]
+    $`
+    \text{clip} = text{frames}[i : i + \text{clip\_length}]
+    `$
 
   - **Increment Index:**
 
-    \[
+    $`
     i = i + \text{frame\_stride}
-    \]
+    `$
 
   Repeat until all frames are processed.
 
 - **Parameters:**
 
-  - \( N \): Total number of frames in the video.
+  - $`( N )`$: Total number of frames in the video.
   - `clip_length`: Number of frames per clip.
   - `frame_stride`: Number of frames to skip for the next clip.
 
@@ -84,43 +84,43 @@ The video is processed by sampling overlapping clips to capture temporal context
 
   - **Frame Embeddings:**
 
-    For each frame \( k \) in a clip:
+    For each frame $`( k )`$ in a clip:
 
-    \[
+    $`
     E_{\text{frame}_k} = \text{CLIP\_ImageEncoder}(\text{frame}_k)
-    \]
+    `$
 
   - **Clip Embedding:**
 
     Average the frame embeddings:
 
-    \[
+    $`
     E_{\text{clip}} = \frac{1}{\text{clip\_length}} \sum_{k=1}^{\text{clip\_length}} E_{\text{frame}_k}
-    \]
+    `$
 
 - **Text Embedding:**
 
   Extract the embedding of the text query:
 
-  \[
+  $`
   E_{\text{text}} = \text{CLIP\_TextEncoder}(\text{query})
-  \]
+  `$
 
 - **Similarity Calculation:**
 
   Compute the cosine similarity between the text embedding and each clip embedding:
 
-  \[
+  $`
   \text{Similarity} = \frac{E_{\text{clip}} \cdot E_{\text{text}}}{\|E_{\text{clip}}\| \times \|E_{\text{text}}\|}
-  \]
+  `$
 
 - **Thresholding:**
 
   Select clips where:
 
-  \[
+  $`
   \text{Similarity} \geq \text{threshold}
-  \]
+  `$
 
 ## Example
 
