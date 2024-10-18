@@ -110,8 +110,6 @@ def search_video_with_text(video_path, text_query, clip_length=8, frame_stride=2
     display_matching_clips(clips, matching_indices, similarities)
 
 if __name__ == "__main__":
-    from google.colab import drive
-    drive.mount('/content/drive')
 
     video_path = "content/IMG_3181.mp4"
 
