@@ -113,8 +113,9 @@ if __name__ == "__main__":
     from google.colab import drive
     drive.mount('/content/drive')
 
-    video_path = "/content/drive/My Drive/data/IMG_3183.mp4"
+    video_path = "content/IMG_3181.mp4"
 
     text_query = "golf follow through"
 
-    search_video_with_text(video_path, text_query, clip_length=8, frame_stride=2, threshold=0.20)
+    # Saw slightly better performance with a higher clip length and lower threshold. Will test more and update the Readme
+    search_video_with_text(video_path, text_query, clip_length=16, frame_stride=2, threshold=0.10)
